@@ -28,23 +28,23 @@ function yourbmi() {
         condition.textContent = "Underweight";
         remedy.textContent="When your body mass index is less than 18.5, it could indicate that you do not have enough body fat to sustain good health."
         butn2.innerHTML = `<button onclick="location.href='#weight-gain'">Weight Gain Tips</button>`;
-      document.getElementById('results').style.backgroundColor = 'red';
+      
     } else if (bmi < 25) {
         condition.textContent = "Healthy";
         remedy.textContent="Congratulations! You appear to have an optimal amount of body fat. Our bodies use fat to maintain healthy emotional, mental and physical processing."
-        document.getElementById('results').style.backgroundColor = 'green';
+       
     
       } else if (bmi < 30) {
         condition.textContent = "Overweight";
         remedy.textContent="When your body mass index number is 25 or higher, it may indicate that you have too much weight in relation to your height."
         butn2.innerHTML = `<button onclick="location.href='#weight-loss'">Weight Loss Tips</button>`;
-        document.getElementById('results').style.backgroundColor = 'yellow';
+       
 
     } else {
         condition.textContent = "Obese";
         remedy.textContent="Based upon your BMI score, you are possibly obese. You are at a much higher risk of developing chronic diseases and shortening your lifespan."
        butn2.innerHTML = `<button onclick="location.href='#weight-loss'">Weight Loss Tips</button>`;
-       document.getElementById('results').style.backgroundColor = 'red';
+       
 
     }
  
@@ -57,9 +57,17 @@ function yourbmi() {
     uname.textContent = `Hi, ${username.value}`;
      document.getElementById('uname').style.color = 'white';
      document.getElementById('condition').style.color = 'white';
+     document.getElementById('results').style.backgroundColor = 'black';
+            
+
+
     result.textContent= `Your BMI is ${bmi}`
-    image.innerHTML='<img src="https://static.vecteezy.com/system/resources/previews/024/585/326/original/3d-happy-cartoon-doctor-cartoon-doctor-on-transparent-background-generative-ai-png.png" width="150px" height="150px" alt="">'
-   updateBMIline(bmi);
+    image.innerHTML='<img src="./images/doctor.webp" width="150px" height="150px" alt="">'
+   // Show BMI line and ticks after submit
+document.getElementById("line").style.display = "flex";
+document.querySelector(".ticks").style.display = "flex";
+
+    updateBMIline(bmi);
 }
 function updateBMIline(bmi) {
   const line = document.getElementById("line");
