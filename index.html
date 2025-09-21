@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="./style.css">
+ 
+</head>
+<body>
+
+  
+
+  <div class="container">
+    <h1 style="margin-top: 200px;">BMI CALCULATOR</h1>
+    <!-- Input Section -->
+    <div id="details">
+      <label for="username">NAME:</label>
+      <input type="text" id="username" placeholder="Enter Your Name">
+
+      <label for="age">AGE:</label>
+      <input type="text" id="age" placeholder="Enter Your Age">
+
+      <label for="weight">WEIGHT (KG):</label>
+      <input type="text" id="weight" placeholder="Enter Your Weight">
+
+      <label for="height">HEIGHT (CM):</label>
+      <input type="text" id="height" placeholder="Enter Your Height">
+
+      
+
+      <button onclick="yourbmi()">SUBMIT</button>
+    </div>
+
+    <!-- Result Section -->
+    <div id="results">
+<div id="image">
+  <!-- doctor image -->
+</div>
+      <div class="line-container" id="line">
+        <div class="seg underweight"></div>
+        <div class="seg normal"></div>
+        <div class="seg overweight"></div>
+        <div class="seg obese"></div>
+        <div id="point" class="point">0</div>
+      </div>
+
+      <div class="ticks">
+        <span>0</span>
+        <span>18.5</span>
+        <span>25</span>
+        <span>30</span>
+        <span>40</span>
+      </div>
+
+      <p id="condition" style="text-align: center; font-weight: bolder;">What is the Body Mass Index (BMI)?</p>
+      <p id="uname" >The body mass index, occasionally called the Quetelet index, is a value taken from a person’s height and weight. It is also determined via a BMI chart table and is an attempt to quantify the level of tissue mass (comprised of bone, fat, and muscle) in a person.    <br> <br>
+        The result is used to determine if that individual is obese, overweight, normal weight or underweight depending on where they fall within the BMI category ranges.</p>
+      <p id="result" style=" font-weight: bolder;color: white;"></p>
+      <p id="remedy" style=" font-weight: bolder;color: white;"></p>
+      <div id="butn2">
+        <!-- button -->
+      </div>
+    </div>
+  </div>
+  <section id="weight-gain">
+  <h2> Weight Gain Tips</h2>
+  <img src="https://tse2.mm.bing.net/th/id/OIP.qLlPl0l-aomFuGFwcVUqhgHaEK?pid=Api&P=0&h=180" alt="Healthy food for weight gain">
+
+  <p>
+    In today’s world, where so many people are battling being overweight, it may seem odd that someone would purposefully want to gain weight.  
+    But the fact is that being underweight can be as damaging as being overweight. People need a certain amount of fat in the body in order for 
+    their body to work correctly and being underweight can lead to brittle bones, a weakened immune system, anemia, fertility issues and hair loss.
+  </p>
+
+  <p>
+    Whether you’re underweight due to genetics, your lifestyle or an illness, there are things you can do to add back some of those pounds in a 
+    healthy manner. In the end, your body should be semi-lean and toned with a healthy glow.
+  </p>
+
+  <h3>How to Put on Weight</h3>
+  <ol>
+    <li><strong>Mentally Prepare Yourself:</strong> You must be ready for dietary and lifestyle changes.</li>
+    <li><strong>Set your Goal:</strong> Aim for no more than 0.5kg per week using the slow and steady method.</li>
+    <li><strong>Plan your Meals:</strong> Stick to a proper meal schedule long-term.</li>
+    <li><strong>Stay away from junk foods:</strong> Avoid unhealthy snacks, cakes, and crisps.</li>
+    <li><strong>Understand your body:</strong> Some people are naturally skinnier due to genetics.</li>
+    <li><strong>Sleep well:</strong> Good sleep reduces stress and supports healthy weight gain.</li>
+    <li><strong>Track your calories and exercise:</strong> Monitor intake vs. expenditure.</li>
+    <li><strong>Treat yourself:</strong> Celebrate small achievements along your journey.</li>
+    <li><strong>Seek treatment:</strong> Consult a doctor if severely underweight.</li>
+    <li><strong>Reduce cardio:</strong> Focus more on strength training.</li>
+    <li><strong>Lift heavier weights:</strong> Fewer reps with heavier weights build muscle.</li>
+    <li><strong>Don’t go to the gym every day:</strong> Rest between workouts.</li>
+    <li><strong>Take a little walk before eating:</strong> Stimulates appetite without excess calorie burn.</li>
+    <li><strong>Eat 200–300 more calories daily:</strong> Small increases help you gain steadily.</li>
+    <li><strong>Drink a glass of red wine before eating:</strong> Can help stimulate appetite.</li>
+    <li><strong>Add extra protein:</strong> Boosts calories and helps muscle growth.</li>
+    <li><strong>Add good healthy carbs:</strong> Include rice, potatoes, and pasta.</li>
+    <li><strong>Eat regular meals:</strong> Never skip meals — three per day is essential.</li>
+    <li><strong>Snack between meals:</strong> Choose nutrient-dense mini-meals like nuts or granola.</li>
+    <li><strong>Drink your calories:</strong> Smoothies and shakes add nutrition and calories.</li>
+    <li><strong>Add whey protein:</strong> Mix into milk, juice, or tea.</li>
+    <li><strong>Drink water after eating:</strong> Avoid drinking too close to meals.</li>
+    <li><strong>Never skip breakfast:</strong> Make it the biggest meal of your day.</li>
+    <li><strong>Nut butters are a must:</strong> Peanut, almond, or walnut butters add protein and calories.</li>
+    <li><strong>Add fatty fish:</strong> Salmon, tuna, sardines, and trout provide healthy fats.</li>
+  </ol>
+
+</section>
+
+
+<section id="weight-loss">
+  <h2> Weight Loss Tips</h2>
+  <img src="https://tse4.mm.bing.net/th/id/OIP.zutTIDU4BohqyHjG7hIN0gHaEK?pid=Api&P=0&h=180" alt="Healthy lifestyle for weight loss">
+
+  <p>
+    It seems that you can’t look at any magazine, television program or read through any website without seeing some advertisement or story about how to lose weight.  
+    And unfortunately, we are being inundated with information about weight loss due to the rising obesity rates and numbers of people struggling to lose or control their weight.
+  </p>
+
+  <h3>25 Weight Loss Tips</h3>
+  <p>
+    Despite the media attention and all the information that’s available, people simply aren’t losing weight.  
+    But there are some very good reasons for this: too much misinformation, fad diets, quick fixes, or lack of commitment.  
+    Yet for those who stay consistent, the end result is always worth it.
+  </p>
+  <p>
+    You will be healthier and your body will work more efficiently if you choose nutritious, high-quality foods and effective, high-impact exercises.  
+    Here are some steps to help you out:
+  </p>
+
+  <ol>
+    <li><strong>Keep your eyes on the prize:</strong> Visualize your goals daily.</li>
+    <li><strong>Have realistic goals:</strong> Slow and steady wins the race.</li>
+    <li><strong>Write down what you eat:</strong> Be specific about your food log.</li>
+    <li><strong>Be persistent:</strong> Don’t let slip-ups derail your journey.</li>
+    <li><strong>Tell your friends and family:</strong> Build accountability and support.</li>
+    <li><strong>Make it a lifestyle:</strong> Avoid temporary diets.</li>
+    <li><strong>Reward yourself:</strong> Use non-food rewards like movies or spa time.</li>
+    <li><strong>Don’t mind the scale:</strong> Muscle may increase weight at first.</li>
+    <li><strong>Drink more water:</strong> 2.5 litres daily to avoid mistaking thirst for hunger.</li>
+    <li><strong>Add fibre:</strong> Helps you feel full longer.</li>
+    <li><strong>Ditch the soda:</strong> Replace with sparkling water or kefir.</li>
+    <li><strong>Pack your lunch:</strong> Avoid vending machines and restaurants.</li>
+    <li><strong>Choose half portions:</strong> Restaurant servings are oversized.</li>
+    <li><strong>Snack smart:</strong> Pick almonds, apples, or chia pudding.</li>
+    <li><strong>Use the apple rule:</strong> If not hungry enough for an apple, you’re not truly hungry.</li>
+    <li><strong>Buy smaller plates:</strong> Control portions naturally.</li>
+    <li><strong>Eat healthy fats:</strong> Olive oil, coconut oil, walnut oil.</li>
+    <li><strong>Eat your veggies:</strong> Fill 50–75% of your plate with vegetables.</li>
+    <li><strong>Drink green tea:</strong> Boosts metabolism and energy.</li>
+    <li><strong>Double the protein:</strong> Helps burn fat and build lean muscle.</li>
+    <li><strong>Start with breakfast:</strong> Prevents overeating later.</li>
+    <li><strong>Cut down alcohol:</strong> Avoid empty calories from drinks.</li>
+    <li><strong>Balance meals:</strong> Always include protein, grains, and vegetables.</li>
+    <li><strong>Never skip meals:</strong> Skipping leads to bad food choices.</li>
+    <li><strong>Add cardio exercises:</strong> Running, cycling, hiking, or sports burn calories effectively.</li>
+  </ol>
+
+</section>
+
+
+
+  <script src="./script.js"></script>
+</body>
+</html>

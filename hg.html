@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ .bmi-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#details-results {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap; /* responsive on smaller screens */
+}
+
+/* Input Section */
+#details {
+  flex: 1 1 30%;  /* smaller width */
+  min-width: 250px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Results Section */
+#results {
+  flex: 2 1 65%;  /* larger width */
+  min-width: 350px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  #details-results {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #details, #results {
+    flex: 1 1 100%;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+ <div class="bmi-container">
+  <h1>BMI CALCULATOR</h1>
+  <div id="details-results">
+    <!-- Input Section (smaller) -->
+    <div id="details">
+      <label for="username">NAME:</label>
+      <input type="text" id="username" placeholder="Enter Your Name">
+
+      <label for="age">AGE:</label>
+      <input type="text" id="age" placeholder="Enter Your Age">
+
+      <label for="weight">WEIGHT (KG):</label>
+      <input type="text" id="weight" placeholder="Enter Your Weight">
+
+      <label for="height">HEIGHT (CM):</label>
+      <input type="text" id="height" placeholder="Enter Your Height">
+
+      <label for="gender">GENDER:</label>
+      <select id="gender">
+        <option value="" disabled selected>Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+
+      <button onclick="yourbmi()">SUBMIT</button>
+    </div>
+
+    <!-- Result Section (larger) -->
+    <div id="results">
+      <div id="image">
+        <!-- doctor image -->
+      </div>
+
+      <div class="line-container" id="line">
+        <div class="seg underweight"></div>
+        <div class="seg normal"></div>
+        <div class="seg overweight"></div>
+        <div class="seg obese"></div>
+        <div id="point" class="point">0</div>
+      </div>
+
+      <div class="ticks">
+        <span>0</span>
+        <span>18.5</span>
+        <span>25</span>
+        <span>30</span>
+        <span>40</span>
+      </div>
+
+      <p id="condition">What is the Body Mass Index (BMI)?</p>
+      <p id="uname">The body mass index, occasionally called the Quetelet index, is a value taken from a person’s height and weight.</p>
+      <p id="result">The result is used to determine if that individual is obese, overweight, normal weight or underweight depending on where they fall within the BMI category ranges.</p>
+      <p id="remedy"></p>
+      <div id="butn2">
+        <!-- button -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
